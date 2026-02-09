@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ## vMenu-v3.8.4-Chinese  
 #### fork from https://github.com/TomGrobbe/vMenu
 
@@ -15,6 +16,8 @@
 
 ## vMenu原本的ReadMe  
 
+=======
+>>>>>>> 1a43b3634b8186e1d5a8af5cb51742f8f85b944c
 #### Latest Builds
 
 ##### Latest AppVeyor build
