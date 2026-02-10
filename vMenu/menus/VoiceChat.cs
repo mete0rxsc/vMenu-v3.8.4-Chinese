@@ -49,11 +49,11 @@ namespace vMenuClient.menus
             }
 
             // Create the menu.
-            menu = new Menu(Game.Player.Name, "Voice Chat Settings");
+            menu = new Menu(Game.Player.Name, "语音聊天设置");
 
-            var voiceChatEnabled = new MenuCheckboxItem("Enable Voice Chat", "Enable or disable voice chat.", EnableVoicechat);
-            var showCurrentSpeaker = new MenuCheckboxItem("Show Current Speaker", "Shows who is currently talking.", ShowCurrentSpeaker);
-            var showVoiceStatus = new MenuCheckboxItem("Show Microphone Status", "Shows whether your microphone is open or muted.", ShowVoiceStatus);
+            var voiceChatEnabled = new MenuCheckboxItem("启用语音聊天", "Enable or disable voice chat.", EnableVoicechat);
+            var showCurrentSpeaker = new MenuCheckboxItem("显示当前演讲者", "Shows who is currently talking.", ShowCurrentSpeaker);
+            var showVoiceStatus = new MenuCheckboxItem("显示麦克风状态", "Shows whether your microphone is open or muted.", ShowVoiceStatus);
 
             var proximity = new List<string>()
             {

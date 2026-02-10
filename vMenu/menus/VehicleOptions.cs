@@ -68,68 +68,68 @@ namespace vMenuClient.menus
         private void CreateMenu()
         {
             // Create the menu.
-            menu = new Menu(Game.Player.Name, "Vehicle Options");
+            menu = new Menu(Game.Player.Name, "车辆选项");
 
             #region menu items variables
             // vehicle god mode menu
-            var vehGodMenu = new Menu("Vehicle Godmode", "Vehicle Godmode Options");
-            var vehGodMenuBtn = new MenuItem("God Mode Options", "Enable or disable specific damage types.") { Label = "→→→" };
+            var vehGodMenu = new Menu("载具无敌模式", "Vehicle Godmode Options");
+            var vehGodMenuBtn = new MenuItem("上帝模式选项", "Enable or disable specific damage types.") { Label = "→→→" };
             MenuController.AddSubmenu(menu, vehGodMenu);
 
             // Create Checkboxes.
-            var vehicleGod = new MenuCheckboxItem("Vehicle God Mode", "Makes your vehicle not take any damage. Note, you need to go into the god menu options below to select what kind of damage you want to disable.", VehicleGodMode);
-            var vehicleNeverDirty = new MenuCheckboxItem("Keep Vehicle Clean", "This will constantly clean your car if the vehicle dirt level goes above 0. Note that this only cleans ~o~dust~s~ or ~o~dirt~s~. This does not clean mud, snow or other ~r~damage decals~s~. Repair your vehicle to remove them.", VehicleNeverDirty);
-            var vehicleBikeSeatbelt = new MenuCheckboxItem("Bike Seatbelt", "Prevents you from being knocked off your bike, bicyle, ATV or similar.", VehicleBikeSeatbelt);
-            var vehicleEngineAO = new MenuCheckboxItem("Engine Always On", "Keeps your vehicle engine on when you exit your vehicle.", VehicleEngineAlwaysOn);
-            var vehicleNoTurbulence = new MenuCheckboxItem("Disable Plane Turbulence", "Disables the turbulence for all planes.", DisablePlaneTurbulence);
-            var vehicleNoTurbulenceHeli = new MenuCheckboxItem("Disable Helicopter Turbulence", "Disables the turbulence for all helicopters.", DisableHelicopterTurbulence);
-            var vehicleSetAnchor = new MenuCheckboxItem("Anchor Boat", "Only works if the current vehicle is a boat and its position is valid for anchoring", AnchorBoat);
-            var vehicleNoSiren = new MenuCheckboxItem("Disable Siren", "Disables your vehicle's siren. Only works if your vehicle actually has a siren.", VehicleNoSiren);
-            var vehicleNoBikeHelmet = new MenuCheckboxItem("No Bike Helmet", "No longer auto-equip a helmet when getting on a bike or quad.", VehicleNoBikeHelemet);
-            var vehicleFreeze = new MenuCheckboxItem("Freeze Vehicle", "Freeze your vehicle's position.", VehicleFrozen);
-            var torqueEnabled = new MenuCheckboxItem("Enable Torque Multiplier", "Enables the torque multiplier selected from the list below.", VehicleTorqueMultiplier);
-            var powerEnabled = new MenuCheckboxItem("Enable Power Multiplier", "Enables the power multiplier selected from the list below.", VehiclePowerMultiplier);
-            var highbeamsOnHonk = new MenuCheckboxItem("Flash Highbeams On Honk", "Turn on your highbeams on your vehicle when honking your horn. Does not work during the day when you have your lights turned off.", FlashHighbeamsOnHonk);
-            var showHealth = new MenuCheckboxItem("Show Vehicle Health", "Shows the vehicle health on the screen.", VehicleShowHealth);
-            var infiniteFuel = new MenuCheckboxItem("Infinite Fuel", "Enables or disables infinite fuel for this vehicle, only works if FRFuel is installed.", VehicleInfiniteFuel);
+            var vehicleGod = new MenuCheckboxItem("车辆上帝模式", "Makes your vehicle not take any damage. Note, you need to go into the god menu options below to select what kind of damage you want to disable.", VehicleGodMode);
+            var vehicleNeverDirty = new MenuCheckboxItem("保持车辆清洁", "This will constantly clean your car if the vehicle dirt level goes above 0. Note that this only cleans ~o~dust~s~ or ~o~dirt~s~. This does not clean mud, snow or other ~r~damage decals~s~. Repair your vehicle to remove them.", VehicleNeverDirty);
+            var vehicleBikeSeatbelt = new MenuCheckboxItem("自行车安全带", "Prevents you from being knocked off your bike, bicyle, ATV or similar.", VehicleBikeSeatbelt);
+            var vehicleEngineAO = new MenuCheckboxItem("发动机始终打开", "Keeps your vehicle engine on when you exit your vehicle.", VehicleEngineAlwaysOn);
+            var vehicleNoTurbulence = new MenuCheckboxItem("禁用平面湍流", "Disables the turbulence for all planes.", DisablePlaneTurbulence);
+            var vehicleNoTurbulenceHeli = new MenuCheckboxItem("禁用直升机湍流", "Disables the turbulence for all helicopters.", DisableHelicopterTurbulence);
+            var vehicleSetAnchor = new MenuCheckboxItem("锚船", "Only works if the current vehicle is a boat and its position is valid for anchoring", AnchorBoat);
+            var vehicleNoSiren = new MenuCheckboxItem("禁用警报器", "Disables your vehicle's siren. Only works if your vehicle actually has a siren.", VehicleNoSiren);
+            var vehicleNoBikeHelmet = new MenuCheckboxItem("不要戴自行车头盔", "No longer auto-equip a helmet when getting on a bike or quad.", VehicleNoBikeHelemet);
+            var vehicleFreeze = new MenuCheckboxItem("冻结车辆", "Freeze your vehicle's position.", VehicleFrozen);
+            var torqueEnabled = new MenuCheckboxItem("启用扭矩倍增器", "Enables the torque multiplier selected from the list below.", VehicleTorqueMultiplier);
+            var powerEnabled = new MenuCheckboxItem("启用功率倍增器", "Enables the power multiplier selected from the list below.", VehiclePowerMultiplier);
+            var highbeamsOnHonk = new MenuCheckboxItem("Honk上闪烁的高音", "Turn on your highbeams on your vehicle when honking your horn. Does not work during the day when you have your lights turned off.", FlashHighbeamsOnHonk);
+            var showHealth = new MenuCheckboxItem("显示车辆健康状况", "Shows the vehicle health on the screen.", VehicleShowHealth);
+            var infiniteFuel = new MenuCheckboxItem("无限燃料", "Enables or disables infinite fuel for this vehicle, only works if FRFuel is installed.", VehicleInfiniteFuel);
 
             // Create buttons.
-            var fixVehicle = new MenuItem("Repair Vehicle", "Repair any visual and physical damage present on your vehicle.");
-            var cleanVehicle = new MenuItem("Wash Vehicle", "Clean your vehicle.");
-            var toggleEngine = new MenuItem("Toggle Engine On/Off", "Turn your engine on/off.");
-            var setLicensePlateText = new MenuItem("Set License Plate Text", "Enter a custom license plate for your vehicle.");
-            var modMenuBtn = new MenuItem("Mod Menu", "Tune and customize your vehicle here.")
+            var fixVehicle = new MenuItem("修理车辆", "Repair any visual and physical damage present on your vehicle.");
+            var cleanVehicle = new MenuItem("洗车", "Clean your vehicle.");
+            var toggleEngine = new MenuItem("选择引擎开/关", "Turn your engine on/off.");
+            var setLicensePlateText = new MenuItem("设置车牌文本", "Enter a custom license plate for your vehicle.");
+            var modMenuBtn = new MenuItem("模组菜单", "Tune and customize your vehicle here.")
             {
                 Label = "→→→"
             };
-            var doorsMenuBtn = new MenuItem("Vehicle Doors", "Open, close, remove and restore vehicle doors here.")
+            var doorsMenuBtn = new MenuItem("车门", "Open, close, remove and restore vehicle doors here.")
             {
                 Label = "→→→"
             };
-            var windowsMenuBtn = new MenuItem("Vehicle Windows", "Roll your windows up/down or remove/restore your vehicle windows here.")
+            var windowsMenuBtn = new MenuItem("车窗", "Roll your windows up/down or remove/restore your vehicle windows here.")
             {
                 Label = "→→→"
             };
-            var componentsMenuBtn = new MenuItem("Vehicle Extras", "Add/remove vehicle components/extras.")
+            var componentsMenuBtn = new MenuItem("车辆附加", "Add/remove vehicle components/extras.")
             {
                 Label = "→→→"
             };
-            var liveriesMenuBtn = new MenuItem("Vehicle Liveries", "Style your vehicle with fancy liveries!")
+            var liveriesMenuBtn = new MenuItem("车辆停放处", "Style your vehicle with fancy liveries!")
             {
                 Label = "→→→"
             };
-            var colorsMenuBtn = new MenuItem("Vehicle Colors", "Style your vehicle even further by giving it some ~g~Snailsome ~s~colors!")
+            var colorsMenuBtn = new MenuItem("车辆颜色", "Style your vehicle even further by giving it some ~g~Snailsome ~s~colors!")
             {
                 Label = "→→→"
             };
-            var underglowMenuBtn = new MenuItem("Vehicle Neon Kits", "Make your vehicle shine with some fancy neon underglow!")
+            var underglowMenuBtn = new MenuItem("车载霓虹灯套件", "Make your vehicle shine with some fancy neon underglow!")
             {
                 Label = "→→→"
             };
-            var vehicleInvisible = new MenuItem("Toggle Vehicle Visibility", "Makes your vehicle visible/invisible. ~r~Your vehicle will be made visible again as soon as you leave the vehicle. Otherwise you would not be able to get back in.");
-            var flipVehicle = new MenuItem("Flip Vehicle", "Sets your current vehicle on all 4 wheels.");
-            var vehicleAlarm = new MenuItem("Toggle Vehicle Alarm", "Starts/stops your vehicle's alarm.");
-            var cycleSeats = new MenuItem("Cycle Through Vehicle Seats", "Cycle through the available vehicle seats.");
+            var vehicleInvisible = new MenuItem("切换车辆可见性", "Makes your vehicle visible/invisible. ~r~Your vehicle will be made visible again as soon as you leave the vehicle. Otherwise you would not be able to get back in.");
+            var flipVehicle = new MenuItem("翻转车辆", "Sets your current vehicle on all 4 wheels.");
+            var vehicleAlarm = new MenuItem("切换车辆报警", "Starts/stops your vehicle's alarm.");
+            var cycleSeats = new MenuItem("骑车穿过车辆座椅", "Cycle through the available vehicle seats.");
             var lights = new List<string>()
             {
                 "Hazard Lights",

@@ -34,7 +34,7 @@ namespace vMenuClient.menus
 
         public int PlayerBlood { get; private set; } = 0;
 
-        private readonly Menu CustomDrivingStyleMenu = new("Driving Style", "Custom Driving Style");
+        private readonly Menu CustomDrivingStyleMenu = new("驾驶模式", "传统驾驶模式");
 
         /// <summary>
         /// Creates the menu.
@@ -43,7 +43,7 @@ namespace vMenuClient.menus
         {
             #region create menu and menu items
             // Create the menu.
-            menu = new Menu(Game.Player.Name, "Player Options");
+            menu = new Menu(Game.Player.Name, "小哑巴的专属页面");
 
             // Create all checkboxes.
             var playerGodModeCheckbox = new MenuCheckboxItem("你是上帝无敌的知道吧", "无敌是多么~多么寂寞~", PlayerGodMode);
@@ -80,7 +80,7 @@ namespace vMenuClient.menus
 
             MenuController.AddSubmenu(menu, vehicleAutoPilot);
 
-            var vehicleAutoPilotBtn = new MenuItem("FSD菜单", "管理车辆自动驾驶选项")
+            var vehicleAutoPilotBtn = new MenuItem("特斯拉FSD", "管理车辆自动驾驶选项")
             {
                 Label = "→→→"
             };

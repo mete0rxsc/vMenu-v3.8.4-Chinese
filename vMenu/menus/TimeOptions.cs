@@ -21,39 +21,39 @@ namespace vMenuClient.menus
         private void CreateMenu()
         {
             // Create the menu.
-            menu = new Menu(Game.Player.Name, "Time Options");
+            menu = new Menu(Game.Player.Name, "时间选项");
 
             // Create all menu items.
-            freezeTimeToggle = new MenuItem("Freeze/Unfreeze Time", "Enable or disable time freezing.");
-            var earlymorning = new MenuItem("Early Morning", "Set the time to 06:00.")
+            freezeTimeToggle = new MenuItem("冻结/解冻时间", "Enable or disable time freezing.");
+            var earlymorning = new MenuItem("清晨", "Set the time to 06:00.")
             {
                 Label = "06:00"
             };
-            var morning = new MenuItem("Morning", "Set the time to 09:00.")
+            var morning = new MenuItem("早上", "Set the time to 09:00.")
             {
                 Label = "09:00"
             };
-            var noon = new MenuItem("Noon", "Set the time to 12:00.")
+            var noon = new MenuItem("中午", "Set the time to 12:00.")
             {
                 Label = "12:00"
             };
-            var earlyafternoon = new MenuItem("Early Afternoon", "Set the time to 15:00.")
+            var earlyafternoon = new MenuItem("午后", "Set the time to 15:00.")
             {
                 Label = "15:00"
             };
-            var afternoon = new MenuItem("Afternoon", "Set the time to 18:00.")
+            var afternoon = new MenuItem("下午", "Set the time to 18:00.")
             {
                 Label = "18:00"
             };
-            var evening = new MenuItem("Evening", "Set the time to 21:00.")
+            var evening = new MenuItem("wanshang", "Set the time to 21:00.")
             {
                 Label = "21:00"
             };
-            var midnight = new MenuItem("Midnight", "Set the time to 00:00.")
+            var midnight = new MenuItem("午夜", "Set the time to 00:00.")
             {
                 Label = "00:00"
             };
-            var night = new MenuItem("Night", "Set the time to 03:00.")
+            var night = new MenuItem("凌晨", "Set the time to 03:00.")
             {
                 Label = "03:00"
             };
@@ -68,8 +68,8 @@ namespace vMenuClient.menus
                 }
                 minutes.Add(i.ToString());
             }
-            var manualHour = new MenuListItem("Set Custom Hour", hours, 0);
-            var manualMinute = new MenuListItem("Set Custom Minute", minutes, 0);
+            var manualHour = new MenuListItem("设置自定义时间", hours, 0);
+            var manualMinute = new MenuListItem("设置自定义分钟", minutes, 0);
 
             // Add all menu items to the menu.
             if (IsAllowed(Permission.TOFreezeTime))

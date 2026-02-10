@@ -848,7 +848,7 @@ namespace vMenuClient
             {
                 MiscSettingsMenu = new MiscSettings();
                 var menu = MiscSettingsMenu.GetMenu();
-                var button = new MenuItem("M其他设置", "其他vMenu选项/设置可以在此处配置。您还可以将设置保存在此菜单中.")
+                var button = new MenuItem("其他设置(Tpis:传送在这里)", "其他vMenu选项/设置可以在此处配置。您还可以将设置保存在此菜单中.")
                 {
                     Label = "→→→"
                 };

@@ -362,68 +362,68 @@ namespace vMenuClient.menus
             var currentEyeColor = editPed ? currentCharacter.PedAppearance.eyeColor : 0;
             SetPedEyeColor(Game.PlayerPed.Handle, currentEyeColor);
 
-            var hairStyles = new MenuListItem("Hair Style", hairStylesList, currentHairStyle, "Select a hair style.");
+            var hairStyles = new MenuListItem("头发样式", hairStylesList, currentHairStyle, "选择一个作为你头发的样式.");
             //MenuListItem hairColors = new MenuListItem("Hair Color", overlayColorsList, currentHairColor, "Select a hair color.");
-            var hairColors = new MenuListItem("Hair Color", overlayColorsList, currentHairColor, "Select a hair color.") { ShowColorPanel = true, ColorPanelColorType = MenuListItem.ColorPanelType.Hair };
+            var hairColors = new MenuListItem("头发颜色", overlayColorsList, currentHairColor, "选择你的头发颜色.") { ShowColorPanel = true, ColorPanelColorType = MenuListItem.ColorPanelType.Hair };
             //MenuListItem hairHighlightColors = new MenuListItem("Hair Highlight Color", overlayColorsList, currentHairHighlightColor, "Select a hair highlight color.");
-            var hairHighlightColors = new MenuListItem("Hair Highlight Color", overlayColorsList, currentHairHighlightColor, "Select a hair highlight color.") { ShowColorPanel = true, ColorPanelColorType = MenuListItem.ColorPanelType.Hair };
+            var hairHighlightColors = new MenuListItem("头发高亮颜色", overlayColorsList, currentHairHighlightColor, "选择一个作为你头发的高亮颜色.") { ShowColorPanel = true, ColorPanelColorType = MenuListItem.ColorPanelType.Hair };
 
-            var blemishesStyle = new MenuListItem("Blemishes Style", blemishesStyleList, currentBlemishesStyle, "Select a blemishes style.");
+            var blemishesStyle = new MenuListItem("瑕疵风格", blemishesStyleList, currentBlemishesStyle, "选择瑕疵样式.");
             //MenuSliderItem blemishesOpacity = new MenuSliderItem("Blemishes Opacity", "Select a blemishes opacity.", 0, 10, (int)(currentBlemishesOpacity * 10f), false);
-            var blemishesOpacity = new MenuListItem("Blemishes Opacity", opacity, (int)(currentBlemishesOpacity * 10f), "Select a blemishes opacity.") { ShowOpacityPanel = true };
+            var blemishesOpacity = new MenuListItem("瑕疵不透明", opacity, (int)(currentBlemishesOpacity * 10f), "Select a blemishes opacity.") { ShowOpacityPanel = true };
 
-            var beardStyles = new MenuListItem("Beard Style", beardStylesList, currentBeardStyle, "Select a beard/facial hair style.");
-            var beardOpacity = new MenuListItem("Beard Opacity", opacity, (int)(currentBeardOpacity * 10f), "Select the opacity for your beard/facial hair.") { ShowOpacityPanel = true };
-            var beardColor = new MenuListItem("Beard Color", overlayColorsList, currentBeardColor, "Select a beard color.") { ShowColorPanel = true, ColorPanelColorType = MenuListItem.ColorPanelType.Hair };
+            var beardStyles = new MenuListItem("胡须样式", beardStylesList, currentBeardStyle, "Select a beard/facial hair style.");
+            var beardOpacity = new MenuListItem("胡须不透明度", opacity, (int)(currentBeardOpacity * 10f), "Select the opacity for your beard/facial hair.") { ShowOpacityPanel = true };
+            var beardColor = new MenuListItem("胡须颜色", overlayColorsList, currentBeardColor, "Select a beard color.") { ShowColorPanel = true, ColorPanelColorType = MenuListItem.ColorPanelType.Hair };
             //MenuSliderItem beardOpacity = new MenuSliderItem("Beard Opacity", "Select the opacity for your beard/facial hair.", 0, 10, (int)(currentBeardOpacity * 10f), false);
             //MenuListItem beardColor = new MenuListItem("Beard Color", overlayColorsList, currentBeardColor, "Select a beard color");
 
-            var eyebrowStyle = new MenuListItem("Eyebrows Style", eyebrowsStyleList, currentEyebrowStyle, "Select an eyebrows style.");
-            var eyebrowOpacity = new MenuListItem("Eyebrows Opacity", opacity, (int)(currentEyebrowOpacity * 10f), "Select the opacity for your eyebrows.") { ShowOpacityPanel = true };
-            var eyebrowColor = new MenuListItem("Eyebrows Color", overlayColorsList, currentEyebrowColor, "Select an eyebrows color.") { ShowColorPanel = true, ColorPanelColorType = MenuListItem.ColorPanelType.Hair };
+            var eyebrowStyle = new MenuListItem("眉毛样式", eyebrowsStyleList, currentEyebrowStyle, "Select an eyebrows style.");
+            var eyebrowOpacity = new MenuListItem("眉毛不透明度", opacity, (int)(currentEyebrowOpacity * 10f), "Select the opacity for your eyebrows.") { ShowOpacityPanel = true };
+            var eyebrowColor = new MenuListItem("眉毛颜色", overlayColorsList, currentEyebrowColor, "Select an eyebrows color.") { ShowColorPanel = true, ColorPanelColorType = MenuListItem.ColorPanelType.Hair };
             //MenuSliderItem eyebrowOpacity = new MenuSliderItem("Eyebrows Opacity", "Select the opacity for your eyebrows.", 0, 10, (int)(currentEyebrowOpacity * 10f), false);
 
-            var ageingStyle = new MenuListItem("Ageing Style", ageingStyleList, currentAgeingStyle, "Select an ageing style.");
-            var ageingOpacity = new MenuListItem("Ageing Opacity", opacity, (int)(currentAgeingOpacity * 10f), "Select an ageing opacity.") { ShowOpacityPanel = true };
+            var ageingStyle = new MenuListItem("老化/皱纹样式", ageingStyleList, currentAgeingStyle, "Select an ageing style.");
+            var ageingOpacity = new MenuListItem("老化/皱纹不透明度", opacity, (int)(currentAgeingOpacity * 10f), "Select an ageing opacity.") { ShowOpacityPanel = true };
             //MenuSliderItem ageingOpacity = new MenuSliderItem("Ageing Opacity", "Select an ageing opacity.", 0, 10, (int)(currentAgeingOpacity * 10f), false);
 
-            var makeupStyle = new MenuListItem("Makeup Style", makeupStyleList, currentMakeupStyle, "Select a makeup style.");
-            var makeupOpacity = new MenuListItem("Makeup Opacity", opacity, (int)(currentMakeupOpacity * 10f), "Select a makeup opacity") { ShowOpacityPanel = true };
+            var makeupStyle = new MenuListItem("妆容样式", makeupStyleList, currentMakeupStyle, "Select a makeup style.");
+            var makeupOpacity = new MenuListItem("妆容不透明度", opacity, (int)(currentMakeupOpacity * 10f), "Select a makeup opacity") { ShowOpacityPanel = true };
             //MenuSliderItem makeupOpacity = new MenuSliderItem("Makeup Opacity", 0, 10, (int)(currentMakeupOpacity * 10f), "Select a makeup opacity.");
-            var makeupColor = new MenuListItem("Makeup Color", overlayColorsList, currentMakeupColor, "Select a makeup color.") { ShowColorPanel = true, ColorPanelColorType = MenuListItem.ColorPanelType.Makeup };
+            var makeupColor = new MenuListItem("妆容颜色", overlayColorsList, currentMakeupColor, "Select a makeup color.") { ShowColorPanel = true, ColorPanelColorType = MenuListItem.ColorPanelType.Makeup };
 
-            var blushStyle = new MenuListItem("Blush Style", blushStyleList, currentBlushStyle, "Select a blush style.");
-            var blushOpacity = new MenuListItem("Blush Opacity", opacity, (int)(currentBlushOpacity * 10f), "Select a blush opacity.") { ShowOpacityPanel = true };
+            var blushStyle = new MenuListItem("腮红样式", blushStyleList, currentBlushStyle, "Select a blush style.");
+            var blushOpacity = new MenuListItem("腮红不透明度", opacity, (int)(currentBlushOpacity * 10f), "Select a blush opacity.") { ShowOpacityPanel = true };
             //MenuSliderItem blushOpacity = new MenuSliderItem("Blush Opacity", 0, 10, (int)(currentBlushOpacity * 10f), "Select a blush opacity.");
-            var blushColor = new MenuListItem("Blush Color", overlayColorsList, currentBlushColor, "Select a blush color.") { ShowColorPanel = true, ColorPanelColorType = MenuListItem.ColorPanelType.Makeup };
+            var blushColor = new MenuListItem("腮红颜色", overlayColorsList, currentBlushColor, "Select a blush color.") { ShowColorPanel = true, ColorPanelColorType = MenuListItem.ColorPanelType.Makeup };
 
-            var complexionStyle = new MenuListItem("Complexion Style", complexionStyleList, currentComplexionStyle, "Select a complexion style.");
+            var complexionStyle = new MenuListItem("肤色/肤质样式", complexionStyleList, currentComplexionStyle, "Select a complexion style.");
             //MenuSliderItem complexionOpacity = new MenuSliderItem("Complexion Opacity", 0, 10, (int)(currentComplexionOpacity * 10f), "Select a complexion opacity.");
-            var complexionOpacity = new MenuListItem("Complexion Opacity", opacity, (int)(currentComplexionOpacity * 10f), "Select a complexion opacity.") { ShowOpacityPanel = true };
+            var complexionOpacity = new MenuListItem("肤色/肤质不透明度", opacity, (int)(currentComplexionOpacity * 10f), "Select a complexion opacity.") { ShowOpacityPanel = true };
 
-            var sunDamageStyle = new MenuListItem("Sun Damage Style", sunDamageStyleList, currentSunDamageStyle, "Select a sun damage style.");
+            var sunDamageStyle = new MenuListItem("晒伤/日晒样式", sunDamageStyleList, currentSunDamageStyle, "Select a sun damage style.");
             //MenuSliderItem sunDamageOpacity = new MenuSliderItem("Sun Damage Opacity", 0, 10, (int)(currentSunDamageOpacity * 10f), "Select a sun damage opacity.");
-            var sunDamageOpacity = new MenuListItem("Sun Damage Opacity", opacity, (int)(currentSunDamageOpacity * 10f), "Select a sun damage opacity.") { ShowOpacityPanel = true };
+            var sunDamageOpacity = new MenuListItem("晒伤/日晒不透明度", opacity, (int)(currentSunDamageOpacity * 10f), "Select a sun damage opacity.") { ShowOpacityPanel = true };
 
-            var lipstickStyle = new MenuListItem("Lipstick Style", lipstickStyleList, currentLipstickStyle, "Select a lipstick style.");
+            var lipstickStyle = new MenuListItem("唇膏样式", lipstickStyleList, currentLipstickStyle, "Select a lipstick style.");
             //MenuSliderItem lipstickOpacity = new MenuSliderItem("Lipstick Opacity", 0, 10, (int)(currentLipstickOpacity * 10f), "Select a lipstick opacity.");
-            var lipstickOpacity = new MenuListItem("Lipstick Opacity", opacity, (int)(currentLipstickOpacity * 10f), "Select a lipstick opacity.") { ShowOpacityPanel = true };
-            var lipstickColor = new MenuListItem("Lipstick Color", overlayColorsList, currentLipstickColor, "Select a lipstick color.") { ShowColorPanel = true, ColorPanelColorType = MenuListItem.ColorPanelType.Makeup };
+            var lipstickOpacity = new MenuListItem("唇膏不透明度", opacity, (int)(currentLipstickOpacity * 10f), "Select a lipstick opacity.") { ShowOpacityPanel = true };
+            var lipstickColor = new MenuListItem("唇膏颜色", overlayColorsList, currentLipstickColor, "Select a lipstick color.") { ShowColorPanel = true, ColorPanelColorType = MenuListItem.ColorPanelType.Makeup };
 
-            var molesFrecklesStyle = new MenuListItem("Moles and Freckles Style", molesFrecklesStyleList, currentMolesFrecklesStyle, "Select a moles and freckles style.");
+            var molesFrecklesStyle = new MenuListItem("痣与雀斑样式", molesFrecklesStyleList, currentMolesFrecklesStyle, "Select a moles and freckles style.");
             //MenuSliderItem molesFrecklesOpacity = new MenuSliderItem("Moles and Freckles Opacity", 0, 10, (int)(currentMolesFrecklesOpacity * 10f), "Select a moles and freckles opacity.");
-            var molesFrecklesOpacity = new MenuListItem("Moles and Freckles Opacity", opacity, (int)(currentMolesFrecklesOpacity * 10f), "Select a moles and freckles opacity.") { ShowOpacityPanel = true };
+            var molesFrecklesOpacity = new MenuListItem("痣与雀斑不透明度", opacity, (int)(currentMolesFrecklesOpacity * 10f), "Select a moles and freckles opacity.") { ShowOpacityPanel = true };
 
-            var chestHairStyle = new MenuListItem("Chest Hair Style", chestHairStyleList, currentChesthairStyle, "Select a chest hair style.");
+            var chestHairStyle = new MenuListItem("胸毛样式", chestHairStyleList, currentChesthairStyle, "Select a chest hair style.");
             //MenuSliderItem chestHairOpacity = new MenuSliderItem("Chest Hair Opacity", 0, 10, (int)(currentChesthairOpacity * 10f), "Select a chest hair opacity.");
-            var chestHairOpacity = new MenuListItem("Chest Hair Opacity", opacity, (int)(currentChesthairOpacity * 10f), "Select a chest hair opacity.") { ShowOpacityPanel = true };
-            var chestHairColor = new MenuListItem("Chest Hair Color", overlayColorsList, currentChesthairColor, "Select a chest hair color.") { ShowColorPanel = true, ColorPanelColorType = MenuListItem.ColorPanelType.Hair };
+            var chestHairOpacity = new MenuListItem("胸毛不透明度", opacity, (int)(currentChesthairOpacity * 10f), "Select a chest hair opacity.") { ShowOpacityPanel = true };
+            var chestHairColor = new MenuListItem("胸毛颜色", overlayColorsList, currentChesthairColor, "Select a chest hair color.") { ShowColorPanel = true, ColorPanelColorType = MenuListItem.ColorPanelType.Hair };
 
             // Body blemishes
-            var bodyBlemishesStyle = new MenuListItem("Body Blemishes Style", bodyBlemishesList, currentBodyBlemishesStyle, "Select body blemishes style.");
-            var bodyBlemishesOpacity = new MenuListItem("Body Blemishes Opacity", opacity, (int)(currentBodyBlemishesOpacity * 10f), "Select body blemishes opacity.") { ShowOpacityPanel = true };
+            var bodyBlemishesStyle = new MenuListItem("身体瑕疵样式", bodyBlemishesList, currentBodyBlemishesStyle, "Select body blemishes style.");
+            var bodyBlemishesOpacity = new MenuListItem("身体瑕疵不透明度", opacity, (int)(currentBodyBlemishesOpacity * 10f), "Select body blemishes opacity.") { ShowOpacityPanel = true };
 
-            var eyeColor = new MenuListItem("Eye Colors", eyeColorList, currentEyeColor, "Select an eye/contact lens color.");
+            var eyeColor = new MenuListItem("眼睛颜色", eyeColorList, currentEyeColor, "Select an eye/contact lens color.");
 
             appearanceMenu.AddMenuItem(hairStyles);
             appearanceMenu.AddMenuItem(hairColors);
@@ -976,15 +976,15 @@ namespace vMenuClient.menus
             propsMenu.InstructionalButtons.Add(Control.ParachuteBrakeLeft, "Turn Camera Left");
 
 
-            var randomizeButton = new MenuItem("Randomize Character", "Randomize character appearance.");
-            var inheritanceButton = new MenuItem("Character Inheritance", "Character inheritance options.");
-            var appearanceButton = new MenuItem("Character Appearance", "Character appearance options.");
-            var faceButton = new MenuItem("Character Face Shape Options", "Character face shape options.");
-            var tattoosButton = new MenuItem("Character Tattoo Options", "Character tattoo options.");
-            var clothesButton = new MenuItem("Character Clothes", "Character clothes.");
-            var propsButton = new MenuItem("Character Props", "Character props.");
-            var saveButton = new MenuItem("Save Character", "Save your character.");
-            var exitNoSave = new MenuItem("Exit Without Saving", "Are you sure? All unsaved work will be lost.");
+            var randomizeButton = new MenuItem("随机化角色外观", "随机化角色外观");
+            var inheritanceButton = new MenuItem("小哑巴的遗传基因", "小哑巴的遗传基因");
+            var appearanceButton = new MenuItem("角色外貌", "角色外貌.");
+            var faceButton = new MenuItem("角色面部形状选项", "角色面部形状选项");
+            var tattoosButton = new MenuItem("角色纹身选项", "角色纹身选项");
+            var clothesButton = new MenuItem("人物服装", "人物服装.");
+            var propsButton = new MenuItem("角色道具", "角色道具");
+            var saveButton = new MenuItem("保存角色", "保存角色");
+            var exitNoSave = new MenuItem("不保存退出", "你确定？你所有的改变都会被删除(不保存)");
             var faceExpressionList = new MenuListItem("Facial Expression", new List<string> { "Normal", "Happy", "Angry", "Aiming", "Injured", "Stressed", "Smug", "Sulk" }, 0, "Set a facial expression that will be used whenever your ped is idling.");
 
             inheritanceButton.Label = "→→→";
@@ -1082,10 +1082,10 @@ namespace vMenuClient.menus
                 listIdx++;
             }
 
-            var inheritanceDads = new MenuListItem("Father", dads.Keys.ToList(), 0, "Select a father.");
-            var inheritanceMoms = new MenuListItem("Mother", moms.Keys.ToList(), 0, "Select a mother.");
-            var inheritanceShapeMix = new MenuSliderItem("Head Shape Mix", "Select how much of your head shape should be inherited from your father or mother. All the way on the left is your dad, all the way on the right is your mom.", 0, 10, 5, true) { SliderLeftIcon = MenuItem.Icon.MALE, SliderRightIcon = MenuItem.Icon.FEMALE, ItemData = "shape_mix" };
-            var inheritanceSkinMix = new MenuSliderItem("Body Skin Mix", "Select how much of your body skin tone should be inherited from your father or mother. All the way on the left is your dad, all the way on the right is your mom.", 0, 10, 5, true) { SliderLeftIcon = MenuItem.Icon.MALE, SliderRightIcon = MenuItem.Icon.FEMALE, ItemData = "skin_mix" };
+            var inheritanceDads = new MenuListItem("选择你爹", dads.Keys.ToList(), 0, "选择你爹");
+            var inheritanceMoms = new MenuListItem("选择你妈", moms.Keys.ToList(), 0, "选择你妈");
+            var inheritanceShapeMix = new MenuSliderItem("头部形状混合", "选择你的头部形状应该从父亲或母亲那里继承多少。左边是你爸爸，右边是你妈妈。", 0, 10, 5, true) { SliderLeftIcon = MenuItem.Icon.MALE, SliderRightIcon = MenuItem.Icon.FEMALE, ItemData = "shape_mix" };
+            var inheritanceSkinMix = new MenuSliderItem("身体形状混合", "选择你的身体肤色应该从父亲或母亲那里继承多少。左边是你爸爸，右边是你妈妈。", 0, 10, 5, true) { SliderLeftIcon = MenuItem.Icon.MALE, SliderRightIcon = MenuItem.Icon.FEMALE, ItemData = "skin_mix" };
 
             inheritanceMenu.AddMenuItem(inheritanceDads);
             inheritanceMenu.AddMenuItem(inheritanceMoms);
@@ -1396,7 +1396,7 @@ namespace vMenuClient.menus
                 var maxTextures = GetNumberOfPedTextureVariations(Game.PlayerPed.Handle, componentIndex, newSelectionIndex);
 
                 currentCharacter.DrawableVariations.clothes[componentIndex] = new KeyValuePair<int, int>(newSelectionIndex, newTextureIndex);
-                listItem.Description = $"Select a drawable using the arrow keys and press ~o~enter~s~ to cycle through all available textures. Currently selected texture: #{newTextureIndex + 1} (of {maxTextures}).";
+                listItem.Description = $"使用箭头键选择一个可绘制对象，然后按~o~输入~s~循环浏览所有可用纹理。当前选定的纹理: #{newTextureIndex + 1} (of {maxTextures}).";
             };
 
             clothesMenu.OnListItemSelect += (sender, listItem, listIndex, realIndex) =>
@@ -1415,7 +1415,7 @@ namespace vMenuClient.menus
                 var maxTextures = GetNumberOfPedTextureVariations(Game.PlayerPed.Handle, componentIndex, listIndex);
 
                 currentCharacter.DrawableVariations.clothes[componentIndex] = new KeyValuePair<int, int>(listIndex, newTextureIndex);
-                listItem.Description = $"Select a drawable using the arrow keys and press ~o~enter~s~ to cycle through all available textures. Currently selected texture: #{newTextureIndex + 1} (of {maxTextures}).";
+                listItem.Description = $"使用箭头键选择一个可绘制对象，然后按~o~输入~s~循环浏览所有可用纹理。当前选定的纹理: #{newTextureIndex + 1} (of {maxTextures}).";
             };
             #endregion
 
@@ -1439,7 +1439,7 @@ namespace vMenuClient.menus
                     ClearPedProp(Game.PlayerPed.Handle, propIndex);
                     currentCharacter.PropVariations.props ??= new Dictionary<int, KeyValuePair<int, int>>();
                     currentCharacter.PropVariations.props[propIndex] = new KeyValuePair<int, int>(-1, -1);
-                    listItem.Description = $"Select a prop using the arrow keys and press ~o~enter~s~ to cycle through all available textures.";
+                    listItem.Description = $"使用箭头键选择一个可绘制对象，然后按~o~输入~s~循环浏览所有可用纹理。";
                 }
                 else
                 {
@@ -1448,12 +1448,12 @@ namespace vMenuClient.menus
                     currentCharacter.PropVariations.props[propIndex] = new KeyValuePair<int, int>(newSelectionIndex, textureIndex);
                     if (GetPedPropIndex(Game.PlayerPed.Handle, propIndex) == -1)
                     {
-                        listItem.Description = $"Select a prop using the arrow keys and press ~o~enter~s~ to cycle through all available textures.";
+                        listItem.Description = $"使用箭头键选择一个可绘制对象，然后按~o~输入~s~循环浏览所有可用纹理。";
                     }
                     else
                     {
                         var maxPropTextures = GetNumberOfPedPropTextureVariations(Game.PlayerPed.Handle, propIndex, newSelectionIndex);
-                        listItem.Description = $"Select a prop using the arrow keys and press ~o~enter~s~ to cycle through all available textures. Currently selected texture: #{textureIndex + 1} (of {maxPropTextures}).";
+                        listItem.Description = $"使用箭头键选择一个可绘制对象，然后按~o~输入~s~循环浏览所有可用纹理。当前选定的纹理: #{textureIndex + 1} (of {maxPropTextures}).";
                     }
                 }
             };
@@ -1478,7 +1478,7 @@ namespace vMenuClient.menus
                     ClearPedProp(Game.PlayerPed.Handle, propIndex);
                     currentCharacter.PropVariations.props ??= new Dictionary<int, KeyValuePair<int, int>>();
                     currentCharacter.PropVariations.props[propIndex] = new KeyValuePair<int, int>(-1, -1);
-                    listItem.Description = $"Select a prop using the arrow keys and press ~o~enter~s~ to cycle through all available textures.";
+                    listItem.Description = $"使用箭头键选择一个道具，然后按~o~输入~s~循环浏览所有可用纹理。";
                 }
                 else
                 {
@@ -1487,12 +1487,12 @@ namespace vMenuClient.menus
                     currentCharacter.PropVariations.props[propIndex] = new KeyValuePair<int, int>(listIndex, newTextureIndex);
                     if (GetPedPropIndex(Game.PlayerPed.Handle, propIndex) == -1)
                     {
-                        listItem.Description = $"Select a prop using the arrow keys and press ~o~enter~s~ to cycle through all available textures.";
+                        listItem.Description = $"使用箭头键选择一个道具，然后按~o~输入~s~循环浏览所有可用纹理。";
                     }
                     else
                     {
                         var maxPropTextures = GetNumberOfPedPropTextureVariations(Game.PlayerPed.Handle, propIndex, listIndex);
-                        listItem.Description = $"Select a prop using the arrow keys and press ~o~enter~s~ to cycle through all available textures. Currently selected texture: #{newTextureIndex + 1} (of {maxPropTextures}).";
+                        listItem.Description = $"使用箭头键选择一个道具，然后按~o~输入~s~循环浏览所有可用纹理。当前选定的纹理: #{newTextureIndex + 1} (of {maxPropTextures}).";
                     }
                 }
                 //propsMenu.UpdateScaleform();
@@ -2014,8 +2014,8 @@ namespace vMenuClient.menus
                 else if (item == exitNoSave) // exit without saving
                 {
                     var confirm = false;
-                    AddTextEntry("vmenu_warning_message_first_line", "Are you sure you want to exit the character creator?");
-                    AddTextEntry("vmenu_warning_message_second_line", "You will lose all (unsaved) customization!");
+                    AddTextEntry("vmenu_warning_message_first_line", "您确定要退出角色编辑吗？");
+                    AddTextEntry("vmenu_warning_message_second_line", "您将丢失所有（未保存的）自定义项！");
                     createCharacterMenu.CloseMenu();
 
                     // wait for confirmation or cancel input.
@@ -2280,16 +2280,16 @@ namespace vMenuClient.menus
 
             MenuController.AddMenu(manageSavedCharacterMenu);
 
-            var spawnPed = new MenuItem("Spawn Saved Character", "Spawns the selected saved character.");
-            editPedBtn = new MenuItem("Edit Saved Character", "This allows you to edit everything about your saved character. The changes will be saved to this character's save file entry once you hit the save button.");
-            var clonePed = new MenuItem("Clone Saved Character", "This will make a clone of your saved character. It will ask you to provide a name for that character. If that name is already taken the action will be canceled.");
-            var setAsDefaultPed = new MenuItem("Set As Default Character", "If you set this character as your default character, and you enable the 'Respawn As Default MP Character' option in the Misc Settings menu, then you will be set as this character whenever you (re)spawn.");
-            var renameCharacter = new MenuItem("Rename Saved Character", "You can rename this saved character. If the name is already taken then the action will be canceled.");
-            var saveCurrentPedAsCharacter = new MenuItem("Update Character Clothing", "This applies your current clothing to this saved ped. ~r~This will overwrite this saved ped's clothing.~w~ Only clothing is updated, no other appearance features.")
+            var spawnPed = new MenuItem("生成已保存的角色", "生成选定的已保存角色。");
+            editPedBtn = new MenuItem("编辑已保存的角色", "这允许您编辑有关已保存角色的所有内容。点击保存按钮后，更改将保存到此角色的保存文件条目中。");
+            var clonePed = new MenuItem("克隆保存的角色", "这将克隆您保存的角色。它将要求您为该角色提供一个名称。如果该名称已被使用，则该操作将被取消。");
+            var setAsDefaultPed = new MenuItem("设置为默认角色", "如果将此角色设置为默认角色，并在“其他设置”菜单中启用“重新生成为默认MP角色”选项，则每次生成时，您都将被设置为此角色。");
+            var renameCharacter = new MenuItem("重命名已保存的角色", "您可以重命名此保存的角色。如果该名称已被使用，则该操作将被取消。");
+            var saveCurrentPedAsCharacter = new MenuItem("更新角色服装", "这将把您当前的衣服应用于此已保存的衣服。~r~这将覆盖已保存的ped的衣服。~w~只更新了服装，没有其他外观特征。")
             {
                 LeftIcon = MenuItem.Icon.WARNING
             };
-            var delPed = new MenuItem("Delete Saved Character", "Deletes the selected saved character. This can not be undone!")
+            var delPed = new MenuItem("删除已保存的字符", "删除选定的已保存字符。这是无法撤销的！")
             {
                 LeftIcon = MenuItem.Icon.WARNING
             };
@@ -2323,7 +2323,7 @@ namespace vMenuClient.menus
                 else if (item == clonePed)
                 {
                     var tmpCharacter = StorageManager.GetSavedMpCharacterData("mp_ped_" + selectedSavedCharacterManageName);
-                    var name = await GetUserInput(windowTitle: "Enter a name for the cloned character", defaultText: tmpCharacter.SaveName.Substring(7), maxInputLength: 30);
+                    var name = await GetUserInput(windowTitle: "输入克隆字符的名称", defaultText: tmpCharacter.SaveName.Substring(7), maxInputLength: 30);
                     if (string.IsNullOrEmpty(name))
                     {
                         Notify.Error(CommonErrors.InvalidSaveName);

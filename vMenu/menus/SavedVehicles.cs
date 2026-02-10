@@ -18,10 +18,10 @@ namespace vMenuClient.menus
         // Variables
         private Menu classMenu;
         private Menu savedVehicleTypeMenu;
-        private readonly Menu vehicleCategoryMenu = new("Categories", "Manage Saved Vehicles");
-        private readonly Menu savedVehiclesCategoryMenu = new("Category", "I get updated at runtime!");
-        private readonly Menu selectedVehicleMenu = new("Manage Vehicle", "Manage this saved vehicle.");
-        private readonly Menu unavailableVehiclesMenu = new("Missing Vehicles", "Unavailable Saved Vehicles");
+        private readonly Menu vehicleCategoryMenu = new("分类", "管理已保存的车辆");
+        private readonly Menu savedVehiclesCategoryMenu = new("类别", "我在运行时得到更新！");
+        private readonly Menu selectedVehicleMenu = new("管理车辆", "管理此已保存的车辆。");
+        private readonly Menu unavailableVehiclesMenu = new("失踪车辆", "不可用的已保存车辆");
         private Dictionary<string, VehicleInfo> savedVehicles = new();
         private readonly List<Menu> subMenus = new();
         private KeyValuePair<string, VehicleInfo> currentlySelectedVehicle = new();
@@ -30,21 +30,21 @@ namespace vMenuClient.menus
         private SavedVehicleCategory currentCategory;
 
         // Need to be editable from other functions
-        private readonly MenuListItem setCategoryBtn = new("Set Vehicle Category", new List<string> { }, 0, "Sets this Vehicle's category. Select to save.");
+        private readonly MenuListItem setCategoryBtn = new("设置车辆类别", new List<string> { }, 0, "设置此车辆的类别。选择保存");
 
         /// <summary>
         /// Creates the menu.
         /// </summary>
         private void CreateClassMenu()
         {
-            var menuTitle = "Saved Vehicles";
+            var menuTitle = "已保存的载具";
             #region Create menus and submenus
             // Create the menu.
-            classMenu = new Menu(menuTitle, "Manage Saved Vehicles");
+            classMenu = new Menu(menuTitle, "管理已保存的载具");
 
             for (var i = 0; i < 23; i++)
             {
-                var categoryMenu = new Menu("Saved Vehicles", GetLabelText($"VEH_CLASS_{i}"));
+                var categoryMenu = new Menu("保存的车辆", GetLabelText($"VEH_CLASS_{i}"));
 
                 var vehClassButton = new MenuItem(GetLabelText($"VEH_CLASS_{i}"), $"All saved vehicles from the {GetLabelText($"VEH_CLASS_{i}")} category.");
                 subMenus.Add(categoryMenu);
@@ -64,7 +64,7 @@ namespace vMenuClient.menus
                 };
             }
 
-            var unavailableModels = new MenuItem("Unavailable Saved Vehicles", "These vehicles are currently unavailable because the models are not present in the game. These vehicles are most likely not being streamed from the server.")
+            var unavailableModels = new MenuItem("不可用的已保存车辆", "这些车辆目前不可用，因为游戏中没有这些模型。这些车辆很可能不是从服务器流式传输的。")
             {
                 Label = "→→→"
             };
@@ -84,7 +84,7 @@ namespace vMenuClient.menus
                 // Create new category
                 if (item.ItemData is not SavedVehicleCategory)
                 {
-                    var name = await GetUserInput(windowTitle: "Enter a category name.", maxInputLength: 30);
+                    var name = await GetUserInput(windowTitle: "输入类别名称.", maxInputLength: 30);
                     if (string.IsNullOrEmpty(name) || name.ToLower() == "uncategorized" || name.ToLower() == "create new")
                     {
                         Notify.Error(CommonErrors.InvalidInput);
@@ -92,7 +92,7 @@ namespace vMenuClient.menus
                     }
                     else
                     {
-                        var description = await GetUserInput(windowTitle: "Enter a category description (optional).", maxInputLength: 120);
+                        var description = await GetUserInput(windowTitle: "输入类别描述（可选）.", maxInputLength: 120);
                         var newCategory = new SavedVehicleCategory
                         {
                             Name = name,
@@ -111,7 +111,7 @@ namespace vMenuClient.menus
                         }
                         else
                         {
-                            Notify.Error($"Saving failed, most likely because this name (~y~<C>{name}</C>~s~) is already in use.");
+                            Notify.Error($"保存失败，很可能是因为此名称 (~y~<C>{name}</C>~s~) 已经被使用了.");
                             return;
                         }
                     }
@@ -153,7 +153,7 @@ namespace vMenuClient.menus
                     return iconNames[newIndex];
                 }
 
-                var renameBtn = new MenuItem("Rename Category", "Rename this category.")
+                var renameBtn = new MenuItem("重命名类别", "重命名此类别。")
                 {
                     Enabled = !isUncategorized
                 };
